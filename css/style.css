@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  background-color: rgb(61, 61, 61);
+  background-color:rgb(0, 0, 0);
 }
 
 * {
@@ -18,7 +18,7 @@ body {
 }   
 
 :root {
-  --container-width: 64em; /* Once I put in my font sizes I might need to change this */
+  --container-width: 62em; /* Once I put in my font sizes I might need to change this */
   --inner-container-width: 42em;
   --blue: #2D9CDB;
   --transparent-blue: #015789aa; /* Used for Gallery on Home Page */
@@ -32,8 +32,7 @@ body {
 }
 
 .nav {
-  background-color:rgb(0, 0, 0);
-  padding: 2em;
+  padding: 2em 0;
   display: flex;
   justify-content: space-between;
 }
@@ -44,7 +43,7 @@ body {
 
 .nav-links {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .nav-links-ul {
@@ -100,6 +99,9 @@ body {
   .menu-icon {
     display: block;
   }
+  .container {
+    max-width: 90vw;
+  }
   .nav-links {
     display: block;
     height: 3em; /* adjust this if the hamburger is cut off or the links start to show when the menu is supposed to be closed */
@@ -117,10 +119,13 @@ body {
     padding-bottom: 2.5em;
   }
 }
-
 @media screen and (max-width: 30em){ /* mobile < 480px */ 
+  .container {
+    max-width: 90vw;
+  }
   .nav-logo img { 
     width: 7em; /* MOBILE SPECIFIC */ 
+    position: absolute; /* this prevents the button from warping if the logo takes up too much horizontal space */ 
   }
   .nav-links-ul-li {
     padding-bottom: 2em;
