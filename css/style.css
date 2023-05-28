@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&family=Rokkitt:wght@200;300;400&display=swap');
+
+
+html {
+  font-family: 'Inter', 'Playfair Display', 'Montserrat', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+body {
+  background-color: rgb(61, 61, 61);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}   
+
+:root {
+  --container-width: 64em; /* Once I put in my font sizes I might need to change this */
+  --inner-container-width: 42em;
+  --blue: #2D9CDB;
+  --transparent-blue: #015789aa; /* Used for Gallery on Home Page */
+  --transparent-black: #00000050; /* Used on Media Page */
+  --less-transparent-black: #00000094;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: auto;
+}
+
+.nav {
+  background-color:rgb(0, 0, 0);
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-logo img {
+  min-height: 3em;
+}
+
+.nav-links {
+align-items: flex-end;
+}
+
+.nav-links-ul {
+  list-style-type: none;  /* get rid of the bullet points */
+  display: flex;  /*puts the list items besude each other */
+  justify-content: center;
+  margin: 0px;
+  padding: 0;
+}
+
+.nav-links-ul-li a {
+  font-size: 1.2em;
+  text-decoration: none;  /* get rid of the underlines */
+  color: rgb(255, 255, 255);
+}
+
+
+.nav-links-ul-li a:hover {
+  color: rgb(0, 170, 255);  /* link changes colors when hovered */
+}
+
+
+
+.menu-icon {
+  display: none;
+  font-size: 2em; /* this controls the size of the hamburger menu */
+  text-align: right;
+}
+
+/* Just Button Styling */
+
+.with-hover-button {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  box-shadow: inset 1px 4px 3px 1px rgba(0, 0, 0, 0.2);
+  padding: 15px 30px;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 50px;
+}
+
+.with-hover-button:hover {
+  color: var(--blue);
+  background-color: #fff;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 64em){  /* small laptop < 1024px */
+  :root {
+    --scaling-ratio: 1.25;
+  }
+}
+
+@media screen and (max-width: 48em){ /* tablet < 768px */
+  .menu-icon {
+    display: block;
+  }
+  .nav-links {
+    height: 3em; /* adjust this if the hamburger is cut off or the links start to show when the menu is supposed to be closed */
+    overflow: hidden;
+    margin-bottom: 0.1rem;
+  }
+  .nav-expanded {
+    height: auto;
+  }
+  .nav-links-ul {
+    flex-direction: column;
+    text-align: right;
+  }
+  .nav-links-ul-li {
+    padding-bottom: 2.5em;
+  }
+}
+
+@media screen and (max-width: 30em){ /* mobile < 480px */ 
+  .nav-logo img { 
+    width: 7em; /* MOBILE SPECIFIC */ 
+  }
+  .nav-links-ul-li {
+    padding-bottom: 2em;
+  }
+}
