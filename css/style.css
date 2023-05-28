@@ -51,6 +51,10 @@ body {
   display: flex;  /*puts the list items besude each other */
 }
 
+.nav-links-ul-li {
+  margin-right: 2.5em;
+}
+
 .nav-links-ul-li a {
   font-size: 1.2em;
   text-decoration: none;  /* get rid of the underlines */
@@ -87,13 +91,14 @@ body {
   background-color: #fff;
 }
 
-/* Media Queries */
+/* Media Queries 
 
-@media screen and (max-width: 64em){  /* small laptop < 1024px */
+@media screen and (max-width: 64em){   small laptop < 1024px 
   :root {
     --scaling-ratio: 1.25;
   }
 }
+*/
 
 @media screen and (max-width: 48em){ /* tablet < 768px */
   .menu-icon {
@@ -117,6 +122,7 @@ body {
   }
   .nav-links-ul-li {
     padding-bottom: 2.5em;
+    margin-right: 0; /* this is here to get rid of the horizontal padding that is necessary on desktop */
   }
 }
 @media screen and (max-width: 30em){ /* mobile < 480px */ 
