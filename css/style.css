@@ -43,15 +43,13 @@ body {
 }
 
 .nav-links {
-align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
 }
 
 .nav-links-ul {
   list-style-type: none;  /* get rid of the bullet points */
   display: flex;  /*puts the list items besude each other */
-  justify-content: center;
-  margin: 0px;
-  padding: 0;
 }
 
 .nav-links-ul-li a {
@@ -64,8 +62,6 @@ align-items: flex-end;
 .nav-links-ul-li a:hover {
   color: rgb(0, 170, 255);  /* link changes colors when hovered */
 }
-
-
 
 .menu-icon {
   display: none;
@@ -105,6 +101,7 @@ align-items: flex-end;
     display: block;
   }
   .nav-links {
+    display: block;
     height: 3em; /* adjust this if the hamburger is cut off or the links start to show when the menu is supposed to be closed */
     overflow: hidden;
     margin-bottom: 0.1rem;
