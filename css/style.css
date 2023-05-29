@@ -61,9 +61,23 @@ body {
   color: rgb(255, 255, 255);
 }
 
-
 .nav-links-ul-li a:hover {
-  color: rgb(0, 170, 255);  /* link changes colors when hovered */
+  border-bottom: 1px solid var(--blue);
+  padding-bottom: 3px;
+  color: var(--blue); /* link changes colors when hovered */
+  /* Animation code */
+  animation: animate 2.5s ease-in-out infinite alternate;
+}
+@keyframes animate{
+  0%{
+      opacity: 1;
+  }
+  50%{
+      opacity: 0.5;
+  }
+  100%{
+      opacity: 1;
+  }
 }
 
 .menu-icon {
